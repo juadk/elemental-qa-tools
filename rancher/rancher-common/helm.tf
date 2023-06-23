@@ -45,10 +45,24 @@ resource "helm_release" "rancher_server" {
   }
 }
 
+# Install Elemental crds
+resource "helm_release" "elemental_operator_crds" {
+  depends_on = [
+    helm_release.rancher_server,
+  ]
+  name             = "elemental-operator-crds"
+  chart            = "elemental-operator-crds-chart"
+  repository       = "oci://registry.opensuse.org/isv/rancher/elemental/${var.elemental_operator_version}/charts/rancher"
+  namespace        = "cattle-elemental-system"
+  create_namespace = true
+  wait             = true
+  timeout          = 90
+}
+
 # Install Elemental operator
 resource "helm_release" "elemental_operator" {
   depends_on = [
-    helm_release.rancher_server,
+    helm_release.elemental_operator_crds,
   ]
   name             = "elemental-operator"
   chart            = "elemental-operator-chart"

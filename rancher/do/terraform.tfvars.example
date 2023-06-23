@@ -28,3 +28,9 @@ rancher_version = "2.7.1"
 
 # Kubernetes version to use for managed workload cluster
 workload_kubernetes_version = "v1.23.14+rke2r1"
+
+# Devel or stable Rancher Manager version
+rancher_devel_version = true
+
+# Version of the Elemental operator to install (stable, dev or staging)
+elemental_operator_version = "stable"
