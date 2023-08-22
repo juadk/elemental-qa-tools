@@ -68,6 +68,7 @@ module "rancher_common" {
   cert_manager_version       = var.cert_manager_version
   elemental_operator_version = var.elemental_operator_version
   rancher_devel_version      = var.rancher_devel_version
+  rancher_version            = var.rancher_version
   rancher_helm_repository    = var.rancher_helm_repository
 
   rancher_server_dns = join(".", ["rancher", digitalocean_droplet.rancher_server.ipv4_address, "sslip.io"])

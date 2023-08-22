@@ -41,6 +41,12 @@ variable "cert_manager_version" {
   default     = "1.10.0"
 }
 
+variable "rancher_version" {
+  type        = string
+  description = "Rancher version to install"
+  default     = ""
+}
+
 variable "rancher_devel_version" {
   type        = bool
   description = "Use stable or devel Rancher server version"
