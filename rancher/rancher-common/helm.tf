@@ -25,6 +25,7 @@ resource "helm_release" "rancher_server" {
   chart            = "rancher"
   repository       = "${var.rancher_helm_repository}"
   devel            = "${var.rancher_devel_version}"
+  version	         = "${var.rancher_version}"
   namespace        = "cattle-system"
   create_namespace = true
   wait             = true
