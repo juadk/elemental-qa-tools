@@ -20,3 +20,6 @@ kube_config*
 
 # Terraform plan files
 *.tfplan
+
+# Terraform lock file
+*.terraform.lock.hcl

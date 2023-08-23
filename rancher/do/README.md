@@ -19,6 +19,7 @@ Both instances will be accessible over SSH using the SSH keys `id_rsa` and `id_r
 |------|---------|
 | <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | 2.20.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | 2.2.3 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 3.4.0 |
 
 ## Modules
@@ -35,6 +36,7 @@ Both instances will be accessible over SSH using the SSH keys `id_rsa` and `id_r
 | [digitalocean_ssh_key.quickstart_ssh_key](https://registry.terraform.io/providers/digitalocean/digitalocean/2.20.0/docs/resources/ssh_key) | resource |
 | [local_file.ssh_public_key_openssh](https://registry.terraform.io/providers/hashicorp/local/2.2.3/docs/resources/file) | resource |
 | [local_sensitive_file.ssh_private_key_pem](https://registry.terraform.io/providers/hashicorp/local/2.2.3/docs/resources/sensitive_file) | resource |
+| [random_string.vm-name](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [tls_private_key.global_key](https://registry.terraform.io/providers/hashicorp/tls/3.4.0/docs/resources/private_key) | resource |
 
 ## Inputs
@@ -51,6 +53,7 @@ Both instances will be accessible over SSH using the SSH keys `id_rsa` and `id_r
 | <a name="input_rancher_devel_version"></a> [rancher\_devel\_version](#input\_rancher\_devel\_version) | Use stable or devel Rancher server version | `bool` | `false` | no |
 | <a name="input_rancher_helm_repository"></a> [rancher\_helm\_repository](#input\_rancher\_helm\_repository) | The helm repository, where the Rancher helm chart is installed from | `string` | `"https://releases.rancher.com/server-charts/latest"` | no |
 | <a name="input_rancher_kubernetes_version"></a> [rancher\_kubernetes\_version](#input\_rancher\_kubernetes\_version) | Kubernetes version to use for Rancher server cluster | `string` | `"v1.23.14+k3s1"` | no |
+| <a name="input_rancher_version"></a> [rancher\_version](#input\_rancher\_version) | Rancher version to install | `string` | `""` | no |
 | <a name="input_workload_kubernetes_version"></a> [workload\_kubernetes\_version](#input\_workload\_kubernetes\_version) | Kubernetes version to use for managed workload cluster | `string` | `"v1.23.14+rke2r1"` | no |
 
 ## Outputs
